@@ -1,0 +1,12 @@
+{
+    "schemaVersion": 1,
+    "name": "Bigjango's Baby mod",
+    "id": "babies",
+    "version": "0.0.1",
+    "mixins": [
+        "babies.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.13.3"
+    }
+}

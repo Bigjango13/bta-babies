@@ -1,0 +1,23 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "bigjango.babies.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        // Babies backend
+        "EntityAnimalMixin",
+        "EntityLivingMixin",
+        // Babies frontend
+        "LivingRendererMixin",
+        "ModelBaseMixin",
+        "ModelQuadrupedMixin",
+        "ModelCowMixin",
+        "ModelPigMixin",
+        "ModelChickenMixin",
+        "ModelWolfMixin",
+    ],
+    "client": [],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
