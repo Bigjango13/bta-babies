@@ -4,10 +4,15 @@
     "package": "bigjango.babies.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        // Babies backend
+        // Babies impl
         "EntityAnimalMixin",
+        "EntityPathfinderMixin",
         "EntityLivingMixin",
-        // Babies frontend
+        "EntityWolfMixin",
+        "EntitySheepMixin",
+        "EntityPigMixin",
+        "EntityChickenMixin",
+        // Babies rendering
         "LivingRendererMixin",
         "ModelBaseMixin",
         "ModelQuadrupedMixin",
