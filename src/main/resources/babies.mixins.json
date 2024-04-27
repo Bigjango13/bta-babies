@@ -4,7 +4,6 @@
     "package": "bigjango.babies.mixin",
     "compatibilityLevel": "JAVA_8",
     "mixins": [
-        // Babies impl
         "EntityAnimalMixin",
         "EntityPathfinderMixin",
         "EntityLivingMixin",
@@ -12,7 +11,8 @@
         "EntitySheepMixin",
         "EntityPigMixin",
         "EntityChickenMixin",
-        // Babies rendering
+    ],
+    "client": [
         "LivingRendererMixin",
         "ModelBaseMixin",
         "ModelQuadrupedMixin",
@@ -21,7 +21,6 @@
         "ModelChickenMixin",
         "ModelWolfMixin",
     ],
-    "client": [],
     "injectors": {
         "defaultRequire": 1
     }

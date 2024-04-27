@@ -252,4 +252,13 @@ public abstract class EntityPathfinderMixin extends EntityLiving {
         }
         return super.interact(player);
     }
+
+    @Override
+    public void handleEntityEvent(byte event, float a) {
+        if (event == 47 && this instanceof IAgableMob) {
+            ((IAgableMob) this).babies$setAge((int) a);
+        } else {
+            super.handleEntityEvent(event, a);
+        }
+    }
 }

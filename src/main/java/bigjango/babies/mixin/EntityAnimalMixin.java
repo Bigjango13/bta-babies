@@ -2,6 +2,7 @@ package bigjango.babies.mixin;
 
 import bigjango.babies.IAgableMob;
 
+import net.minecraft.core.Global;
 import net.minecraft.core.entity.Entity;
 import net.minecraft.core.entity.EntityLiving;
 import net.minecraft.core.entity.animal.EntityAnimal;
@@ -23,7 +24,13 @@ public abstract class EntityAnimalMixin extends EntityPathfinderMixin implements
     public int babies$getAge() {
         return babies$agable() ? age : 0;
     }
-    @Override public void babies$setAge(int age) { this.age = age; }
+    @Override public void babies$setAge(int age) {
+        // MP Check, sync age
+        if (Global.isServer) {
+            world.sendTrackedEntityStatusUpdatePacket(this, (byte) 47, age);
+        }
+        this.age = age;
+    }
     @Override public boolean babies$agable() { return true; }
     @Override
     public boolean babies$isBaby() {
