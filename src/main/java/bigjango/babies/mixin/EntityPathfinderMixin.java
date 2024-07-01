@@ -40,7 +40,7 @@ public abstract class EntityPathfinderMixin extends EntityLiving {
             x + random.nextFloat() * bbWidth * 2 - bbWidth,
             y + .5f + random.nextFloat() * bbHeight,
             z + random.nextFloat() * bbWidth * 2 - bbWidth,
-            xa, ya, za
+            xa, ya, za, 0
         );
     }
 
